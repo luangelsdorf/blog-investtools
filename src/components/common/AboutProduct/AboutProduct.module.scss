@@ -1,0 +1,172 @@
+@import "../../../styles/scss/colors";
+
+.productSection {
+  margin-top: 100px;
+  position: relative;
+
+  @media (max-width: 1199px) {
+    .monitorBox {
+      max-width: 510px;
+    }
+    .logoBox {
+      max-width: 170px;
+    }
+    .aboutProductBox {
+      margin-top: -55px;
+
+      .aboutBox {
+        padding: 30px 35px 40px;
+      }
+    }
+    .featureBox {
+      top: -90px;
+      padding: 115px 40px 110px 90px;
+
+      .feature div {
+        padding: 0 15px;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .logoBox {
+      max-width: 160px;
+      margin-bottom: 30px;
+    }
+    .aboutProductBox {
+      margin-top: -45px;
+
+      .aboutBox {
+        right: 0;
+        padding: 35px 45px 70px;
+        min-height: auto;
+      }
+    }
+    .featureBox {
+      top: 0;
+      left: 0;
+      padding: 65px 40px 50px;
+
+      .feature div {
+        padding: 0 30px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 75px;
+    .logoBox {
+      max-width: 150px;
+      margin: 0 auto 35px;
+    }
+    .aboutProductBox {
+      margin-top: 0;
+
+      .aboutBox {
+        padding: 25px 25px 60px;
+      }
+      .featureBox {
+        padding: 35px 30px 50px;
+
+        .feature {
+          flex-direction: column;
+          & div {
+            max-width: 100%;
+            padding: 0;
+            margin-bottom: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.monitorBox {
+  position: relative;
+  z-index: 11;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.logoBox {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 130px;
+  max-width: 300px;
+  margin-left: 30px;
+}
+
+.aboutProductBox {
+  margin-top: -71px;
+
+  .aboutBox {
+    background: $snow;
+    padding: 30px 50px 70px;
+    position: relative;
+    z-index: 1;
+
+    img {
+      margin-top: 35px;
+    }
+
+    h3 {
+      margin-bottom: 50px;
+      @media (max-width: 768px) {
+        white-space: normal !important;
+      }
+    }
+  }
+}
+
+.textBox {
+  & > p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.featureBox {
+  background: $darkGreen;
+  padding: 0 50px;
+  height: 100%;
+  position: relative;
+  align-items: center;
+  display: flex;
+
+  .feature {
+    flex-wrap: wrap !important;
+    display: flex !important;
+    div {
+      max-width: 50%;
+      margin-bottom: 70px;
+      padding: 0 25px;
+      h6 {
+        color: $green;
+        text-transform: uppercase;
+      }
+      p {
+        white-space: break-spaces;
+        color: $white;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.decorSmall {
+  bottom: -76px;
+  right: 66px;
+  @media (max-width: 992px) {
+    display: none;
+  }
+}
+
+.decorBig {
+  bottom: -6px;
+  right: 0;
+}
+
+.decorTop {
+  left: 0;
+  top: -45px;
+}

@@ -1,0 +1,374 @@
+{
+  "hero": [
+    {
+      "logo": "perform-it-logo.svg",
+      "text": "Total controle do fluxo de investimentos de sua Gestora",
+      "image": "perform-it-screen.png",
+      "alt": "Perform It",
+      "id": "perform-it"
+    },
+    {
+      "logo": "diligence-it-logo.svg",
+      "text": "Agilidade e transparência para sua distribuição com suitability e prevenção à lavagem de dinheiro",
+      "image": "diligence-it-screen.png",
+      "alt": "Diligence It",
+      "id": "diligence-it"
+    },
+    {
+      "logo": "arcon-it-logo.svg",
+      "text": "Sistema pré trade compliance - Garanta o enquadramento de fundos em tempo real",
+      "image": "arcon-it-screen.png",
+      "alt": "Arcon It",
+      "id": "arcon-it"
+    }
+  ],
+  "products": [
+    {
+      "image": "perform-it-logo.svg",
+      "alt": "Perform It",
+      "text": "Ganhe Tempo para Pensar na Estratégia",
+      "link": "/perform-it"
+    },
+    {
+      "image": "diligence-it-logo.svg",
+      "alt": "Diligence It",
+      "text": "Diligence It",
+      "link": "/diligence-it"
+    },
+    {
+      "image": "arcon-it-logo.svg",
+      "alt": "Arcon It",
+      "text": "Arcon It",
+      "link": "/arcon-it"
+    }
+  ],
+  "about": {
+      "title": "Soluções importantes e inéditas\npara o Mercado Financeiro",
+      "paragraphs": [
+        {
+          "id": 1,
+          "text": "Na vanguarda do desenvolvimento tecnológico, reconhecemos a necessidade de estar, sempre, encontrando dores do mercado e usando o nosso know-how para gerar soluções amplas, adaptadas às necessidades de cada agente do ecossistema financeiro.\n\n"
+        },
+        {
+          "id": 2,
+          "text": "Do microuniverso das gestoras ao amplo universo das finanças, a Investtools tem como objetivo final transformar o mercado com tecnologia.\n\n"
+        },
+        {
+          "id": 3,
+          "text": "Nossa qualidade no desenvolvimento de soluções gera satisfação imediata nos clientes, com aprovação de 100% dos nossos produtos e taxa de saída próxima a zero.\n\n"
+        },
+        {
+          "id": 4,
+          "text": "Nossa motivação está no desafio da inovação constante e da satisfação do cliente. Trabalhamos para nos tornar referência no mercado como uma empresa de destaque na área de tecnologia e de excelência na área financeira.\n\n"
+        }
+      ]
+  },
+  "clients": [
+    {
+      "logo": "hix2@2x.png",
+      "name": "Nome cliente-1@2x"
+    },
+    {
+      "logo": "perfin4@2x.png",
+      "name": "Nome cliente-2@2x"
+    },
+    {
+      "logo": "squadra2@2x.png",
+      "name": "Nome cliente-3@2x"
+    },
+    {
+      "logo": "leblon4@2x.png",
+      "name": "Nome cliente-4@2x"
+    },
+    {
+      "logo": "necton2@2x.png",
+      "name": "Nome cliente-6@2x"
+    },
+    {
+      "logo": "skopos@2x.png",
+      "name": "Nome cliente-7@2x"
+    },
+    {
+      "logo": "brasilplural@2x.png",
+      "name": "Nome cliente-10@2x"
+    },
+    {
+      "logo": "capitania@2x.png",
+      "name": "Nome cliente-11@2x"
+    },
+    {
+      "logo": "modulo2@2x.png",
+      "name": "Nome cliente-12@2x"
+    },
+    {
+      "logo": "equitas2@2x.png",
+      "name": "Nome cliente-13@2x"
+    },
+    {
+      "logo": "tavola2@2x.png",
+      "name": "Nome cliente-14@2x"
+    },
+    {
+      "logo": "studio@2x.png",
+      "name": "Nome cliente-15@2x"
+    },
+    {
+      "logo": "apex@2x.png",
+      "name": "Nome cliente-17@2x"
+    },
+    {
+      "logo": "oceana@2x.png",
+      "name": "Nome cliente-18@2x"
+    },
+    {
+      "logo": "tempo@2x.png",
+      "name": "Nome cliente-19@2x"
+    },
+    {
+      "logo": "bogari3@2x.png",
+      "name": "Nome cliente-20@2x"
+    },
+    {
+      "logo": "florenca2@2x.png",
+      "name": "Nome cliente-21@2x"
+    },
+    {
+      "logo": "saga@2x.png",
+      "name": "Nome cliente-23@2x"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "O Perform It é uma ótima ferramenta que consolida várias funções do operacional dos fundos numa única plataforma. O sistema abrange todos os fatores que impactam diariamente na gestão das carteiras, automatizando os processos, validando as informações, economizando tempo nas diversas etapas e reduzindo a chance de erros por falha humana.",
+      "name": "Pedro Rudge",
+      "company": "Leblon Equities"
+    },
+    {
+      "quote": "Atualmente o PerformIt nos permite criar nossas próprias telas utilizando uma API muito fácil de usar, sejam elas relatórios ou novas funcionalidades do sistema. A equipe do PerformIt me deu suporte completo para eu desenvolver minhas telas, me ajudando a montar meu ambiente de desenvolvimento e a entender as tecnologias necessárias. Aqui na Oceana nós já criamos 12 telas que nos auxiliam no nosso dia-a-dia do sistema.",
+      "name": "Mauricio Arieira",
+      "company": "Oceana Investimentos"
+    },
+    {
+      "quote": "O Perform It é uma ótima ferramenta que consolida várias funções do operacional dos fundos numa única plataforma. O sistema abrange todos os fatores que impactam diariamente na gestão das carteiras, automatizando os processos, validando as informações, economizando tempo nas diversas etapas e reduzindo a chance de erros por falha humana.",
+      "name": "Pedro Rudge",
+      "company": "Leblon Equities"
+    },
+    {
+      "quote": "Atualmente o PerformIt nos permite criar nossas próprias telas utilizando uma API muito fácil de usar, sejam elas relatórios ou novas funcionalidades do sistema. A equipe do PerformIt me deu suporte completo para eu desenvolver minhas telas, me ajudando a montar meu ambiente de desenvolvimento e a entender as tecnologias necessárias. Aqui na Oceana nós já criamos 12 telas que nos auxiliam no nosso dia-a-dia do sistema.",
+      "name": "Mauricio Arieira",
+      "company": "Oceana Investimentos"
+    }
+  ],
+  "team": [
+    {
+      "name": "Andre Aizim<br> Kelmanson",
+      "position": "CEO",
+      "linkedin": "#",
+      "photo": "andre.png"
+    },
+    {
+      "name": "Lucas<br> Pérez",
+      "position": "Sócio",
+      "linkedin": "#",
+      "photo": "lucas.png"
+    },
+    {
+      "name": "david<br> gibbin",
+      "position": "Sócio",
+      "linkedin": "#",
+      "photo": "david.png"
+    },
+    {
+      "name": "Fabio Issamu<br> Oshiro",
+      "position": "Sócio",
+      "linkedin": "#",
+      "photo": "fabio.png"
+    },
+    {
+      "name": "Leonardo<br> Mendonça",
+      "position": "Sócio",
+      "linkedin": "#",
+      "photo": "leonardo.png"
+    }
+  ],
+  "performit": {
+      "monitor": "note-perform-it.png",
+      "logo": "perform-it-logo.svg",
+      "title": "Total controle do fluxo de\nInvestimento de sua gestora",
+      "about": "<p>O Perform It possibilita total controle do fluxo de investimentos de sua gestora, liberando você e sua equipe para pensar no principal, a estratégia.</p><p>Com o Perform It, as gestoras de recursos terão maior controle das operações, sem perder o foco no objetivo principal. Tudo de forma automática e com segurança comprovada.</p><p>Nosso software ERP monitora todo o fluxo da gestora de capitais, com interfaces modernas com administradoras, corretoras, entre outras.</p><p>O Perform It controla o fluxo 360 graus, desde os processos de Back Office até Middle Office e Front Office.</p>",
+      "href": "http://investtools.rds.land/cta-site-perform-it",
+      "ctaImage": "cta-img-performit.png",
+      "features": [
+        {
+          "id": 1,
+          "title": "Sistema automatizado",
+          "text": "Sistema 100% automatizado, sem a necessidade de preenchimento de planilhas."
+        },
+        {
+          "id": 2,
+          "title": "API",
+          "text": "Poderosa API, onde a gestora desenvolve suas novas telas e funcionalidades e integra no menu do sistema."
+        },
+        {
+          "id": 3,
+          "title": "Due Diligence",
+          "text": "Ferramentas modernas de apoio ao processo de Due Diligence."
+        },
+        {
+          "id": 4,
+          "title": "Time de excelência",
+          "text": "Equipe treinada e atualizada constantemente, com aprovação dos clientes."
+        },
+        {
+          "id": 5,
+          "title": "Taxa de satisfação <br>extremamente alta",
+          "text": "Clientes que contrataram o Perform It permanecem com o sistema."
+        },
+        {
+          "id": 6,
+          "title": "Infraestrutura <br>personalizada",
+          "text": "Infraestrutura personalizada para cada cliente, onde ele possui ambiente próprio."
+        }
+      ],
+      "functionalities": [
+        {
+          "icon": "back-office.svg",
+          "title": "Back Office",
+          "text": "<p>Interface fácil e inovadora para relacionamento com administradoras;</p><p>Interface personalizada para as gestoras de recursos;</p><p>Conciliação diária das carteiras dos clientes.</p>"
+        },
+        {
+          "icon": "middle-office.svg",
+          "title": "Middle Office",
+          "text": "<p>Relatórios completos para equipes comerciais das  gestoras de recursos;</p><p>Relatórios de rebate de distribuidor;</p><p>Foco em Compliance.</p>"
+        },
+        {
+          "icon": "front-office.svg",
+          "title": "Front Office",
+          "text": "<p>Visualização e operação da carteira agrupadas de acordo com cada cliente;</p><p>Atribuições de performance para as gestoras de fundos de investimento;</p><p>Boletagem + compliance pre trade + alocação através de plugins complementares.</p>"
+        }
+      ]
+  },
+  "diligenceit": {
+    "monitor": "note-diligence-it.png",
+    "logo": "diligence-it-logo.svg",
+    "title": "Agilidade e transparência para sua distribuição com suitability e prevenção à lavagem de dinheiro",
+    "about": "<p>O Diligence It firma a parceria da Investtools com gestoras que busquem tornar seus processos de suitability e de prevenção à lavagem de dinheiro mais rápidos, práticos e transparentes.</p>",
+    "href": "http://investtools.rds.land/cta-site-diligence-it",
+    "ctaImage": "cta-img-diligenceit.png",
+    "features": [
+      {
+        "id": 1,
+        "title": "Prevenção à lavagem de dinheiro",
+        "text": "Confiança. Esse será sempre um dos nossos lemas: atuar de forma clara e honesta a fim de que os clientes estejam tranquilos quanto às informações e dados que fornecemos.\n\nAté por isso, enviamos ao Conselho de Controle de Atividades Financeiras (COAF) relatório sempre que identificamos o surgimento de padrão suspeito de operações de lavagem de dinheiro."
+      },
+      {
+        "id": 2,
+        "title": "Suitability",
+        "text": "Controle. Com o Diligence It, o cliente fica liberado do estresse de ter que se preocupar se o seu perfil está próximo da expiração. A parte burocrática fica conosco. Preocupe-se apenas com seus investimentos."
+      }
+    ],
+    "functionalities": [
+      {
+        "icon": "bank-slip.svg",
+        "title": "BOLETAGEM DE MOVIMENTAÇÃO",
+        "text": "Burocracia zero. O Diligence It realiza o enquadramento do cliente antes de processar a ordem do envio dos boletos. Chega de perder tempo preparando, manualmente, o encaminhamento dessas informações para a administradora."
+      },
+      {
+        "icon": "clients.svg",
+        "title": "CONSULTAS À BASE DE CLIENTES",
+        "text": "Praticidade. Precisando consultar a sua base de clientes? Com apenas um clique é possível descobrir quantos clientes, por exemplo, não assinaram ainda o termo de recusa de suitability. Faça sua busca com ordenação, filtros, agrupamentos, tabelas pivô, exportação para Excel e muito mais."
+      },
+      {
+        "icon": "docs.svg",
+        "title": "GESTÃO DE DOCUMENTOS",
+        "text": "Informação. Sempre que um documento estiver prestes a vencer ou um cotista não tiver assinado documento essencial para operar nos fundos, o sistema informará você no momento ideal. Além disso, seus arquivos estão seguros sob nossos cuidados. Não perca tempo e espaço com este armazenamento: nós cuidamos de tudo para você."
+      },
+      {
+        "icon": "compliance.svg",
+        "title": "MOTOR DE REGRAS DO COMPLIANCE",
+        "text": "Versatilidade. Elaborado para auxiliar as gestoras a se adaptar às instruções do CVM 558, o Diligence It dispõe às gestoras diversas regras de validação para o compliance, de maneira que possam selecioná-las de acordo com suas necessidades e preferências."
+      }
+    ]
+  },
+  "arconit": {
+    "monitor": "note-arcon-it.png",
+    "logo": "arcon-it-logo.svg",
+    "title": "Sistema pré trade compliance - Garanta o enquadramento de fundos em tempo real",
+    "about": "<p>O Arcon It é um sistema de pré compliance, integrado às principais plataformas de trading do mercado e ao carrying broker, que simplifica processos operacionais das gestoras, usando a tecnologia para garantir que estejam de acordo com a Instrução 555 da CVM, relativa às necessidades de enquadramento dos fundos de investimento.</p>",
+    "href": "http://investtools.rds.land/cta-site-arcon-it",
+    "ctaImage": "cta-img-arcon.png",
+    "features": [
+      {
+        "id": 1,
+        "title": "Praticidade",
+        "text": "Ao invés de ter que checar manualmente se as operações realizadas pelo gestor desenquadraram o fundo de investimentos dos limites determinados por seu regulamento, a gestora pode usar o Arcon It para automatizar esse processo. A parte burocrática fica conosco. O sistema facilita todo processo de alocação ao final do dia"
+      },
+      {
+        "id": 2,
+        "title": "Rapidez",
+        "text": "Todo o processo de checagem pré-compliance leva cerca de cinco minutos, poupa a gestora de incorrer em erros operacionais, e permite que os gestores foquem em seu core business: os investimentos."
+      }
+    ],
+    "functionalities": [
+      {
+        "icon": "detection.svg",
+        "title": "DETECÇÃO DE IRREGULARIDADES",
+        "text": "Ao simular as estratégias de compra e venda, o Arcon It revela à gestora qualquer irregularidade de desenquadramento do fundo, e permite que o gestor ajuste sua estratégia para mantê-la dentro do compliance estipulado."
+      },
+      {
+        "icon": "integration.svg",
+        "title": "INTEGRAÇÃO",
+        "text": "Integração com as principais plataformas de de trading de mercado e ao carrying broker"
+      },
+      {
+        "icon": "audit.svg",
+        "title": "AUDITÁVEL",
+        "text": "Ao automatizar processos operacionais, o Arcon It facilita o processo de auditoria, porque registra detalhadamente as intenções de trade, operações e checagens."
+      },
+      {
+        "icon": "scalability.svg",
+        "title": "ESCALÁVEL",
+        "text": "O Arcon It é um produto que pode ser integrado ao  Perform It, software de gestão de fluxos de investimentos para gestoras, solução consolidada e reconhecida como carro-chefe da Investtools. Os sistemas rodam de forma independente, mas a integração pode ser personalizada de acordo com as necessidades da gestora."
+      }
+    ]
+  },
+  "generalText": [
+    {
+      "contactText": "Quer conhecer nossos produtos?\nNós teremos o prazer de te responder.",
+      "aboutText": "<p>Somos uma empresa com foco nas melhores soluções de tecnologia para o mercado financeiro, atuando com excelência no atendimento e com elevado nível de inovações tecnológicas.</p> <p>Trabalhamos em várias frentes ao mesmo tempo, com produtos voltados para gestoras, corretoras, distribuidoras, agentes autônomos, pessoas físicas e researches. Além disso, fornecemos treinamento e consultorias com tecnologia de ponta.</p>",
+      "historyText": "<p>Nascida em 2007 com foco apenas em soluções para corretoras, a Investtools cresceu sempre em busca de soluções importantes e inéditas para o mercado financeiro. Em 2009, surge o Perform It, software inovador onde o cliente poderia ter controle total do fluxo de investimentos de sua gestora. Já em 2014, sob o comando de novos sócios, a empresa é refundada. Em 2017, surgem novos produtos e empresas, como o Grana Capital, o Arcon It e o Blockchain Studio. Nos últimos quatro anos, aumentamos consideravelmente o número de clientes, ampliamos nossa equipe e continuamos desenvolvendo novas ferramentas tecnológicas.</p> <p>Esse é só o começo de um caminho com muitas inovações pela frente, sempre desenvolvendo as melhores soluções para o mercado.</p>",
+      "whyUsText": "<p>Nossa qualidade no desenvolvimento de soluções tanto tecnológicas quanto financeiras criam satisfação imediata nos clientes, com aprovação de 100% dos nossos produtos e taxa de saída próxima a zero.</p>",
+      "motivationText": "<p>Nossa motivação está no desafio da inovação constante e da satisfação do cliente. Trabalhamos para nos tornar referência no mercado, como uma empresa de excelência tecnológica e excelência na área financeira.</p> <p>Se você, assim como a gente, acredita que a tecnologia da informação é vital para o mercado financeiro, a Investtools é ideal para você e para sua empresa.</p>"
+    }
+  ],
+  "businesses": [
+    {
+      "id": 1,
+      "name": "Grana Capital",
+      "logo": "grana.svg",
+      "link": "https://www.grana.capital",
+      "text": "Startup comandada por um dos sócios da Investtools, o Grana é o primeiro aplicativo a automatizar integralmente a gestão do Imposto de Renda para investidores da Bolsa de Valores."
+    },
+    {
+      "id": 2,
+      "name": "Blockchain Studio",
+      "logo": "blockchain.svg",
+      "link": "https://www.blockchainstudio.com.br",
+      "text": "Antes mesmo do Bitcoin tomar conta dos noticiários, percebemos o poder transformador do mercado e da tecnologia que há por detrás da moeda virtual: o blockchain. Um potencial inovador tão claro que o GOV Token, primeira solução gerada pelo Blockchain Studio e primeira solução gerada no âmbito da Investtools voltada às finanças públicas, tornou a unidade de negócios objeto de um investimento de R$ 1,5 milhão do BNDES, da Faperj e da AgeRio."
+    },
+    {
+      "id": 3,
+      "name": "Trampolin",
+      "logo": "trampolin.svg",
+      "link": "https://www.trampol.in",
+      "text": "Trampolin criada por outro sócio com a proposta de desenvolver plataformas personalizadas de banking (Baas) para empresas que desejam oferecer serviços financeiros."
+    },
+    {
+      "id": 4,
+      "name": "Plific",
+      "logo": "plific.svg",
+      "link": "https://www.plific.com",
+      "text": "Ao usar ferramentas de open finance para elaborar um aplicativo voltado em facilitar as finanças de motoristas e entregadores de aplicativo, os jovens fundadores da Plific são um exemplo de como boas ideias podem, além de criar soluções inéditas, ter forte impacto social. A Investtools, nesse caso, surge precisamente para investir no caminho que separa a ideia da realidade - o fornecimento de know-how em tecnologia -, tão necessário para a consolidação de empreendimentos ambiciosos."
+    }
+  ]
+}

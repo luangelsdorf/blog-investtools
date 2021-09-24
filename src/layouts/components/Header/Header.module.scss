@@ -1,0 +1,270 @@
+@import "../../../styles/scss/colors";
+
+// Index
+.header {
+
+  nav {
+    padding: 15px 1rem .5rem;
+    font-weight: bold;
+    transition: all .385s ease-in-out;
+    background-color: transparent;
+    img {
+      max-width: 170px !important;
+      z-index: 1040 !important;
+    }
+  }
+
+  li:global(.nav-item) {
+    margin: 0 15px;
+    position: relative;
+
+    a:focus {
+      color: $darkGreen !important;
+    }
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 5px;
+      background: $green;
+      display: block;
+      position: absolute;
+      top: -100%;
+      opacity: 0;
+      transition: all .285s ease-in-out;
+    }
+
+    &:hover::before {
+      top: -16px;
+      opacity: 1;
+    }
+  }
+
+  button:focus {
+    box-shadow: none;
+  }
+
+  :global(.collapsing) {
+    transition: none;
+  }
+
+  :global(.shrink) {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.04);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background: $white;
+
+    li:hover::before {
+      top: -8px;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    nav img {
+      max-width: 155px !important;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .toggler {
+      padding: 0;
+    }
+
+    .navCollapse {
+      transition: left .375s ease;
+      background-color: $snow;
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.18);
+      height: 100vh;
+      width: 50%;
+      text-align: center;
+      padding: 30px 10px;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: -100%;
+
+      li {
+        &::before {
+          opacity: 0 !important;
+        }
+      }
+    }
+
+    .navCollapse:global(.show) {
+      left: 0;
+    }
+
+    .navCollapse .mainNav {
+      width: 80%;
+      padding: 70px 0 30px;
+      height: 100%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    & .navCollapse .mainNav li {
+      margin: .75rem 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navCollapse {
+      width: 65%;
+    }
+  }
+}
+
+
+/* Icon */
+.hamburgerBox {
+  display: inline-block;
+  width: 35px;
+  height: 24px;
+  position: relative;
+}
+
+.hamburgerInner,
+.hamburgerInner::before,
+.hamburgerInner::after {
+  display: block;
+  width: 35px;
+  height: 3px;
+  background-color: $darkGreen;
+  border-radius: 3px;
+  position: absolute;
+}
+
+.hamburgerInner {
+  top: 10px;
+  transition: transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+  &::before {
+    content: "";
+    top: -8px;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+  }
+
+  &::after {
+    content: "";
+    bottom: -8px;
+    transition: bottom 0.1s 0.25s ease-in,transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+}
+
+
+.toggler:not(:global(.collapsed)) .hamburgerInner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.toggler:not(:global(.collapsed)) .hamburgerInner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+.toggler:not(:global(.collapsed)) .hamburgerInner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+}
+
+
+.mainNav {
+  a, span {
+    font-family: Raleway, 'sans-serif';
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+
+    
+    @media (max-width: 1400px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.header :global(.dropdown) {
+  &:hover ul, &:focus-within ul {
+    visibility: visible;
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  span:global(.nav-link) {
+    cursor: pointer;
+  }
+
+  ul {
+    visibility: hidden;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top center;
+    position: absolute;
+    top: 100%;
+    list-style: none;
+    min-width: 185px;
+    padding: 0;
+    background-color: $white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: all 150ms ease;
+    @media (max-width: 992px) {
+      left: -15%;
+    }
+
+    li {
+
+      a, span {
+        color: $darkGreen;
+        padding: 20px !important;
+        display: inline-block;
+        width: 100%;
+
+        &:hover {
+          color: $green;
+        }
+      }
+
+      &:last-child:hover ul, &:last-child:focus-within ul {
+        visibility: visible;
+        opacity: 1;
+        transform: scaleY(1);
+      }
+
+      &:last-child ul {
+        visibility: hidden;
+        transform: scaleY(0);
+        transform-origin: top center;
+        background-color: $green;
+        @media (max-width: 992px) {
+          top: -100%;
+          left: 75%;
+        }
+
+        li {
+          transition: all 150ms ease-in-out;
+          color: $white;
+
+          a, span {
+            color: inherit;
+            font-weight: normal;
+            padding: 20px;
+            display: inline-block;
+            width: 100%;
+          }
+
+          &:hover {
+            color: $darkGreen;
+            background-color: $white;
+          }
+        }
+      }
+
+      a, span {
+        text-decoration: none;
+        transition: color 0.15s ease-in-out;
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@import "../../../styles/scss/colors";
+
+.funcSection {
+  padding-bottom: 90px;
+
+  h3 {
+    margin-top: 75px;
+    margin-bottom: 75px;
+  }
+
+  & :global(.title-box) {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 992px) {
+    padding-top: 85px;
+    padding-bottom: 45px;
+
+    :global(.container) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .cardFunc {
+      display: flex;
+    }
+    .content {
+      max-width: 100%;
+      margin-left: 50px;
+    }
+  }
+  @media (max-width: 768px) {
+    padding-top: 65px;
+    padding-bottom: 35px;
+
+    .cardFunc {
+      display: block;
+      margin-bottom: 65px;
+    }
+    .content {
+      margin-left: 0;
+    }
+  }
+}
+
+.cardFunc {
+  margin-bottom: 50px;
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 25px;
+}
+
+.content {
+  max-width: 90%;
+
+  h6 {
+    color: $green;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .textBox {
+    font-size: 14px;
+    line-height: 24px;
+
+    p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}

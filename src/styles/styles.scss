@@ -1,0 +1,90 @@
+@import "./scss/colors";
+@import "./scss/typography";
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  margin-top: 75px;
+  background-color: $white;
+}
+
+.title-box {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-style: solid;
+    border-width: 20px 20px 0 0;
+    border-color: $green transparent transparent transparent;
+  }
+
+  & h3 {
+    letter-spacing: .44px;
+    text-transform: uppercase;
+    padding-top: 35px;
+  }
+
+  @media (max-width: 768px) {
+    & h3 {
+      font-size: 20px;
+      padding-top: 30px;
+      line-height: 30px;
+    }
+  }
+}
+
+.decoration {
+  position: absolute;
+  & img {
+    max-width: 110px;
+  }
+  @media (max-width: 768px) {
+    & img {
+      max-width: 60px;
+    }
+  }
+}
+
+// Button
+.ivt-btn, .ivt-btn-alt {
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: $white;
+  transition: 150ms ease;
+  border: 0;
+  border-radius: 2px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+}
+
+.ivt-btn {
+  background-color: $darkGreen;
+  &:hover {
+    background-color: $green;
+  }
+}
+.ivt-btn-alt {
+  background-color: $green;
+  &:hover {
+    background-color: $darkGreen;
+  }
+}
+
+@media (max-width: 576px) {
+  div.col-12 {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}

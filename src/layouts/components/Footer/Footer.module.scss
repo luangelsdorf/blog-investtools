@@ -1,0 +1,137 @@
+@import "../../../styles/scss/colors";
+
+.footer {
+  background: $darkGreen;
+  position: relative;
+  border-top: 6px solid $green;
+  position: relative;
+
+  :global(.container.caption) {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  /*& :global(.row) {
+    padding-top: 50px;
+  }*/
+
+  @media (max-width: 992px) {
+    .footerLogo {
+      justify-content: center;
+      text-align: center;
+      margin: 0 auto 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footerLogo {
+      margin: 0 auto;
+    }
+  }
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+
+  & + div {
+    margin-top: 30px;
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 14px;
+    }
+    p {
+      margin: 0;
+      color: $white;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 70%;
+  }
+}
+
+.footer {
+  h5 {
+    color: white;
+    margin-bottom: 25px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      &:first-child {
+        margin-bottom: 5px;
+      }
+      &:last-child {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+.footerBox {
+  color: $white;
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+
+  @media (max-width: 992px) {
+    & > div {
+      padding: 10% 10% 10% 10% !important;
+      text-align: center;
+      a {
+        justify-content: center;
+      }
+    }
+  }
+
+  &:nth-child(2) > div {
+    .socials {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+
+      a, path {
+        transition: all 150ms ease;
+        &:hover path {
+          fill: $white;
+        }
+      }
+
+      a:nth-child(2) {
+        height: 18px;
+        margin-left: 5px;
+        margin-right: 10px;
+      }
+      @media (max-width: 992px) {
+        justify-content: center;
+      }
+    }
+  }
+
+  &:nth-child(3) > div {
+    margin-left: -15px;
+  }
+}
+
+.footerBottom {
+  width: 100%;
+  padding: 16px 0;
+  background-color: #224751;
+  text-align: center;
+  color: $white;
+  font-size: 10px;
+  line-height: 18px;
+}
+
+.decorBottom {
+  bottom: 0;
+  right: 0;
+}
