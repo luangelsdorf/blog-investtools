@@ -18,7 +18,7 @@ export default function Blog({ postList }) {
 }
 
 export async function getStaticProps() {
-  const posts = await fetch('http://localhost:1337/posts/');
+  const posts = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/`);
   const postList = await posts.json();
 
   return {

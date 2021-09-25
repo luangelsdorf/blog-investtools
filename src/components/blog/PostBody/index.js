@@ -2,10 +2,10 @@ import React from 'react';
 import ShareButton from '../ShareButton';
 import styles from './PostBody.module.scss';
 
-export default function PostBody({ content }) {
+export default function PostBody({postContent}) {
   return (
     <div className={styles.body}>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      <div dangerouslySetInnerHTML={{ __html: postContent.body }} />
       <div className={styles.share}>
         <div className="row align-items-center">
           <div className="col-12 col-lg-6">
