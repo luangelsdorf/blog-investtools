@@ -29,6 +29,10 @@
   h5 {
     margin-bottom: 0;
     color: $green;
+
+    @media (max-width: 992px) {
+      text-align: center;
+    }
   }
 }
 
@@ -63,5 +67,9 @@
 
   svg {
     width: 17px;
+  }
+
+  @media (max-width: 992px) {
+    justify-content: center;
   }
 }

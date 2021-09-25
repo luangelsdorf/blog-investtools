@@ -14,7 +14,7 @@ export default function RelatedPosts({ relatedPosts }) {
       <div className="container">
         <div className={styles.title}>
           <h3>Posts Relacionados</h3>
-          <a href="#">Ver Todos</a>
+          <a href="/" className="d-none d-lg-block">Ver Todos</a>
         </div>
         <div className="row">
           {
