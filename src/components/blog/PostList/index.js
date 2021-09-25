@@ -22,7 +22,7 @@ export default function PostList({ posts }) {
                     cover={`${process.env.NEXT_PUBLIC_API_URL}${post.cover.formats.small.url}`}
                     category={post.categories[0].name}
                     title={post.title}
-                    exerpt={post.exerpt}
+                    body={post.body}
                     href={`/posts/${post.slug}`}
                   />
                 </div>
