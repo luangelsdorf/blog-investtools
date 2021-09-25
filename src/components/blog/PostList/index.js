@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Decoration from 'src/components/common/Decoration';
 import PostCard from '../PostCard';
 
-export default function PostList() {
+export default function PostList({ posts }) {
   return (
     <section className={styles.section}>
 
@@ -13,14 +13,21 @@ export default function PostList() {
 
       <div className="container">
         <div className="row gy-5">
-          <div className="col-12 col-md-6 col-lg-4">
-            <PostCard
-              cover="/images/postimg.jpg"
-              category="Geral"
-              title="HTTP vs. FIX: como fazer integrações escaláveis"
-              exerpt="Nosso desenvolvedor Fabiano Martins explicou como a escolha de diferentes tecnologias está ligada à elaboração de soluções que se integram com multibrokers, como o PerformIt."
-            />
-          </div>
+          {
+            posts.map(post => {
+              return (
+                <div className="col-12 col-md-6 col-lg-4">
+                  <PostCard
+                    cover={`http://localhost:1337${post.cover.formats.small.url}`}
+                    category={post.categories[0].name}
+                    title={post.title}
+                    exerpt={post.exerpt}
+                    href={`http://localhost:1337/posts/${post.slug}`}
+                  />
+                </div>
+              )
+            })
+          }
         </div>
       </div>
     </section>
