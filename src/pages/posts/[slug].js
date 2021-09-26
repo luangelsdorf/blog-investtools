@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 import PostBody from "src/components/blog/PostBody";
 import PostHero from "src/components/blog/PostHero";
@@ -8,6 +9,11 @@ export default function BlogPost({ thisPost, relatedPosts }) {
 
   return (
     <>
+      <Head>
+        <title>
+          {`${thisPost[0].title} - Blog Investtools`}
+        </title>
+      </Head>
       <PostHero postContent={thisPost[0]} />
       <PostBody postContent={thisPost[0]} />
       <RelatedPosts relatedPosts={relatedPosts} />

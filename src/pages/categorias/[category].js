@@ -1,9 +1,15 @@
 import React from 'react';
+import Head from "next/head";
 import FilteredPosts from 'src/components/blog/FilteredPosts';
 
 export default function Category({ category }) {
   return (
-    <FilteredPosts category={category} />
+    <>
+      <Head>
+        <title>{`${category[0].name} - Blog Investtools`}</title>
+      </Head>
+      <FilteredPosts category={category} />
+    </>
   )
 }
 
