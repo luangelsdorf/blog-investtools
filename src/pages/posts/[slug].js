@@ -3,7 +3,7 @@ import React from "react";
 import PostBody from "src/components/blog/PostBody";
 import PostHero from "src/components/blog/PostHero";
 import RelatedPosts from "src/components/blog/RelatedPosts";
-import { getRelatedPosts } from "src/utils/modules";
+import { getExerpt, getRelatedPosts } from "src/utils/modules";
 
 export default function BlogPost({ thisPost, relatedPosts }) {
 
@@ -13,6 +13,7 @@ export default function BlogPost({ thisPost, relatedPosts }) {
         <title>
           {`${thisPost[0].title} - Blog Investtools`}
         </title>
+        <meta name="description" content={getExerpt(thisPost[0].body)} />
       </Head>
       <PostHero postContent={thisPost[0]} />
       <PostBody postContent={thisPost[0]} />

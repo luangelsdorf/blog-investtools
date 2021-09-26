@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from './PostCard.module.scss';
 import Link from 'next/link';
+import { getExerpt } from 'src/utils/modules';
 
 export default function PostCard(props) {
 
@@ -13,9 +14,6 @@ export default function PostCard(props) {
       document.querySelectorAll('article > div:last-child').forEach(el => el.style.padding = '0 25px')
     }
   }, [])
-
-  // retorna o resumo sem tags html e com 20 palavras
-  const getExerpt = () => props.body.split(' ').slice(0, 20).join(' ').replace(/(<([^>]+)>)/gi, "");
 
   return (
     <article className={styles.card}>
@@ -36,7 +34,7 @@ export default function PostCard(props) {
           </a>
         </Link>
         <div className="body-small">
-          {props.body ? getExerpt() : null}
+          {props.body ? getExerpt(props.body) : null}
         </div>
         <Link href={props.href}>
           <a className="body-small">Ler Mais</a>

@@ -9,6 +9,7 @@ export default function Blog({ postList }) {
     <>
       <Head>
         <title>Blog Investtools – Confira Nossos Conteúdos</title>
+        <meta name="description" content="Aqui você confere as novidades sobre tudo o que está relacionado com o mercado de capitais, comentários sobre novas tecnologias, entre outros assuntos." />
       </Head>
 
       <BlogHero />

@@ -32,3 +32,5 @@ export function getRelatedPosts(thisPost, allPosts) {
     return sorted.slice(0, 2);
   }
 }
+
+export const getExerpt = (string) => string.split(' ').slice(0, 20).join(' ').replace(/(<([^>]+)>)/gi, "");
