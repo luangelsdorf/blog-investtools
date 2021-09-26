@@ -6,7 +6,6 @@ import Decoration from 'src/components/common/Decoration';
 import PostCard from '../PostCard';
 
 export default function PostList({ posts }) {
-  console.log(process.env.NEXT_PUBLIC_API_URL);
   return (
     <section className={styles.section}>
 
