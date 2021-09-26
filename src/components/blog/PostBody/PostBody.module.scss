@@ -5,9 +5,21 @@
   margin-left: auto;
   margin-right: auto;
 
+  a {
+    text-decoration: none;
+  }
+
+  blockquote {
+    font-size: 1.75em;
+    line-height: 1.6;
+    padding: 55px 0;
+    margin: 0;
+  }
+
   p {
-    line-height: 2em;
+    line-height: 1.8em;
     font-size: 18px;
+    margin-bottom: 0;
     @media (max-width: 768px) {
       font-size: 16px;
     }
