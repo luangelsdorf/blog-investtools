@@ -1,12 +1,21 @@
 import React from 'react';
 import Head from "next/head";
 import FilteredPosts from 'src/components/blog/FilteredPosts';
+import { useRouter } from 'next/router';
 
 export default function Category({ category }) {
+
+  const router = useRouter();
+  if (router.isFallback) {
+    return <h1>Carregando...</h1>
+  }
+
   return (
     <>
       <Head>
-        <title>{`${category[0].name} - Blog Investtools`}</title>
+        <title>
+        {`${category[0].name} - Blog Investtools`}
+        </title>
       </Head>
       <FilteredPosts category={category} />
     </>
@@ -19,7 +28,7 @@ export async function getStaticPaths() {
   const paths = categories.map((category) => ({
     params: { category: category.slug },
   }))
-  return { paths, fallback: false }
+  return { paths, fallback: true }
 }
 
 export async function getStaticProps({ params }) {
@@ -27,6 +36,7 @@ export async function getStaticProps({ params }) {
   const category = await res.json();
 
   return {
-    props: { category }
+    props: { category },
+    revalidate: 5
   }
 }

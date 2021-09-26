@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './RelatedPosts.module.scss';
 import Decoration from 'src/components/common/Decoration';
 import PostCard from '../PostCard';
+import Link from 'next/link';
 
 export default function RelatedPosts({ relatedPosts }) {
 
@@ -14,7 +15,9 @@ export default function RelatedPosts({ relatedPosts }) {
       <div className="container">
         <div className={styles.title}>
           <h3>Posts Relacionados</h3>
-          <a href="/" className="d-none d-lg-block">Ver Todos</a>
+          <Link href="/">
+            <a className="d-none d-lg-block">Ver Todos</a>
+          </Link>
         </div>
         <div className="row">
           {

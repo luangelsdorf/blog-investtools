@@ -23,7 +23,8 @@ export async function getStaticProps() {
   const postList = await posts.json();
 
   return {
-    props: { postList }
+    props: { postList },
+    revalidate: 5
   }
 }
 
