@@ -1,5 +1,5 @@
 import React from 'react';
-import FilteredPosts from 'src/components/FilteredPosts';
+import FilteredPosts from 'src/components/blog/FilteredPosts';
 
 export default function Category({ category }) {
   return (

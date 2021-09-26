@@ -6,6 +6,9 @@ import Decoration from 'src/components/common/Decoration';
 import PostCard from '../PostCard';
 
 export default function PostList({ posts }) {
+
+  posts = posts.sort((a, b) => b.id - a.id);
+
   return (
     <section className={styles.section}>
 
