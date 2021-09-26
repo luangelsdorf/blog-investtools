@@ -40,6 +40,13 @@
 
   & > div {
     text-align: center;
+
+    span {
+      a {
+        color: $white;
+        text-decoration: none;
+      }
+    }
   }
 
   img {
