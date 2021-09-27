@@ -20,7 +20,7 @@ export default function FilteredPosts({ category }) {
                   <div className="col-12 col-lg-6" key={`post-${index}`}>
                     <PostCard
                       cover={`${process.env.NEXT_PUBLIC_API_URL}${post.cover.formats.small.url}`}
-                      category={category[0].name}
+                      category={category[0]}
                       title={post.title}
                       href={`/posts/${post.slug}`}
                     />

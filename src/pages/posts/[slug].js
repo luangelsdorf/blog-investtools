@@ -42,7 +42,7 @@ export async function getStaticProps({ params }) {
   const allPosts = await res.json();
   const thisPost = allPosts.filter(post => post.slug === params.slug);
 
-  if (thisPost) {
+  if (thisPost.length < 1) {
     return {
       notFound: true,
     }

@@ -25,7 +25,9 @@ export default function PostCard(props) {
         </a>
       </Link>
       <div className={`${styles.badge} caption`}>
-        {props.category}
+        <Link href={`/categorias/${props.category.slug}`}>
+          <a>{props.category.name}</a>
+        </Link>
       </div>
       <div className={styles.body}>
         <Link href={props.href}>
