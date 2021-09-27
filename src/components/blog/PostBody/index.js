@@ -4,7 +4,11 @@ import styles from './PostBody.module.scss';
 
 export default function PostBody({postContent}) {
 
-  let body = postContent.body.replace('/uploads', `${process.env.NEXT_PUBLIC_API_URL}/uploads`);
+  let body = postContent.body;
+
+  if (process.env.NEXT_PUBLIC_ENV === 'dev') {
+    body = postContent.body.replace('/uploads', `${process.env.NEXT_PUBLIC_API_URL}/uploads`);
+  }
 
   return (
     <div className={styles.body}>
