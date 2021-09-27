@@ -41,6 +41,13 @@ export async function getStaticProps({ params }) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/`);
   const allPosts = await res.json();
   const thisPost = allPosts.filter(post => post.slug === params.slug);
+
+  if (thisPost) {
+    return {
+      notFound: true,
+    }
+  }
+
   const relatedPosts = getRelatedPosts(thisPost[0], allPosts);
 
   return {

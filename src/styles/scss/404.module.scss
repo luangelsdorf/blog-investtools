@@ -1,0 +1,32 @@
+@import 'colors';
+
+.notfound {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  & > div {
+    display: flex;
+    align-items: center;
+
+    h1, h2 {
+      margin-bottom: 0;
+    }
+
+    h1 {
+      margin-right: 30px;
+      padding-right: 30px;
+      border-right: 1px solid $steel;
+    }
+  }
+
+  & > div:nth-child(2) {
+    a {
+      color: $green;
+      text-decoration: none;
+      cursor: pointer
+    }
+  }
+}

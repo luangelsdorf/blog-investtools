@@ -35,6 +35,12 @@ export async function getStaticProps({ params }) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categorias?slug=${params.category}`);
   const category = await res.json();
 
+  if (category.length < 1) {
+    return {
+      notFound: true,
+    }
+  }
+
   return {
     props: { category },
     revalidate: 5
