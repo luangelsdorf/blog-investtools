@@ -110,51 +110,30 @@ export default function Header() {
             <ul className={`${styles.mainNav} navbar-nav ms-auto`}>
 
               <li className="nav-item">
-                <Link href="/a-investtools"><a className="nav-link">A Investtools</a></Link>
+                <a href="https://investtools.com.br/a-investtools" className="nav-link">A Investtools</a>
               </li>
               <li className="nav-item">
-                <Link href="/perform-it"><a className="nav-link">Perform It</a></Link>
+                <a href="https://investtools.com.br/perform-it" className="nav-link">Perform It</a>
               </li>
               <li className="nav-item">
-                <Link href="/diligence-it"><a className="nav-link">Diligence It</a></Link>
+                <a href="https://investtools.com.br/diligence-it" className="nav-link">Diligence It</a>
               </li>
               <li className="nav-item">
-                <Link href="/arcon-it"><a className="nav-link">Arcon It</a></Link>
+                <a href="https://investtools.com.br/arcon-it" className="nav-link">Arcon It</a>
               </li>
               <li className="nav-item dropdown">
-                <Link href="/novos-negocios"><a className="nav-link">Novos Negócios</a></Link>
+                <a href="https://investtools.com.br/novos-negocios" className="nav-link">Novos Negócios</a>
                 <DropDown />
               </li>
-              {/* <li className="nav-item">
-                <Link href="/blog"><a className="nav-link">Blog</a></Link>
-              </li> */}
               <li className="nav-item">
                 <a href="https://blog.investtools.com.br" className="nav-link">Blog</a>
               </li>
               <li className="nav-item">
-                <Link href="/contato"><a className="nav-link">Contato</a></Link>
+                <a href="https://investtools.com.br/contato" className="nav-link">Contato</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" target="_blank" href="https://investtools.gupy.io/" rel="noopener noreferrer">Carreiras</a>
               </li>
-
-              {/*{
-                links.map(navLink => {
-                  return (
-                    <li className={`nav-item ${navLink.class}`} key={navLink.slug}>
-                      <Link href={`/${navLink.slug}`}>
-                        <a className="nav-link">
-                          {navLink.name}
-                        </a>
-                      </Link>
-                      {
-                        navLink.class ? <DropDown/> : null
-                      }
-                    </li>
-                  )
-                })
-              }*/}
-
             </ul>
           </div>
         </div>
