@@ -7,19 +7,6 @@ import { useRouter } from 'next/router';
 import { pageView } from 'src/utils/gtag';
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter();
-
-  useEffect(() => {
-    const handleRouteChange = url => {
-      pageView(url);
-    }
-
-    router.events.on('routeChangeComplete', handleRouteChange);
-
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-    }
-  }, []);
 
   return (
     <>
