@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange);
     }
-  }, [router.events]);
+  }, []);
 
   return (
     <>
