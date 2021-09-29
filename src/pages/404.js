@@ -6,6 +6,7 @@ export default function Custom404() {
   return (
     <>
       <Head>
+        <title>Esta página não foi encontrada.</title>
         <meta name="robots" content="noindex" />
       </Head>
       

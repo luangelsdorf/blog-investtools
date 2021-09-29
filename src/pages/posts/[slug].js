@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
 import React from "react";
 import PostBody from "src/components/blog/PostBody";
 import PostHero from "src/components/blog/PostHero";
@@ -8,10 +7,6 @@ import { getExerpt, getRelatedPosts } from "src/utils/modules";
 
 export default function BlogPost({ thisPost, relatedPosts }) {
 
-  const router = useRouter();
-  if (router.isFallback) {
-    return <h1>Carregando...</h1>
-  }
 
   return (
     <>
@@ -34,7 +29,7 @@ export async function getStaticPaths() {
   const paths = allPosts.map((post) => ({
     params: { slug: post.slug },
   }))
-  return { paths, fallback: true }
+  return { paths, fallback: 'blocking' }
 }
 
 export async function getStaticProps({ params }) {

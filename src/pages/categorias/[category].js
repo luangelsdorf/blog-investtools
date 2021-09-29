@@ -1,14 +1,8 @@
 import React from 'react';
 import Head from "next/head";
 import FilteredPosts from 'src/components/blog/FilteredPosts';
-import { useRouter } from 'next/router';
 
 export default function Category({ category }) {
-
-  const router = useRouter();
-  if (router.isFallback) {
-    return <h1>Carregando...</h1>
-  }
 
   return (
     <>
@@ -28,7 +22,7 @@ export async function getStaticPaths() {
   const paths = categories.map((category) => ({
     params: { category: category.slug },
   }))
-  return { paths, fallback: true }
+  return { paths, fallback: 'blocking' }
 }
 
 export async function getStaticProps({ params }) {
