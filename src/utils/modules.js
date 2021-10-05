@@ -34,3 +34,13 @@ export function getRelatedPosts(thisPost, allPosts) {
 }
 
 export const getExerpt = (string) => string.split(' ').slice(0, 20).join(' ').replace(/(<([^>]+)>)/gi, "");
+
+export async function getLayoutContent() {
+  const resHeader = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/cabecalho`);
+  const header = await resHeader.json();
+
+  const resFooter = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/site`);
+  const footer = await resFooter.json();
+
+  return { header, footer }
+}

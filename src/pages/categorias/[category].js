@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from "next/head";
 import FilteredPosts from 'src/components/blog/FilteredPosts';
+import { getLayoutContent } from 'src/utils/modules';
 
 export default function Category({ category }) {
 
@@ -35,8 +36,13 @@ export async function getStaticProps({ params }) {
     }
   }
 
+  const contactRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/dados-de-contato`);
+  const contact = await contactRes.json();
+
+  const layout = await getLayoutContent();
+
   return {
-    props: { category },
+    props: { category, contact, layout },
     revalidate: 5
   }
 }

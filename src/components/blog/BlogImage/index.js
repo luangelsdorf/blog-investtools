@@ -4,7 +4,7 @@ import styles from './BlogImage.module.scss';
 import typewriter from 'public/images/macbook-screen.png';
 import triangles from 'public/images/triangulos-banner@2x.png';
 
-export default function BlogImage() {
+export default function BlogImage({ image }) {
 
   useEffect(() => {
     window.onmousemove = e => {
@@ -33,7 +33,7 @@ export default function BlogImage() {
 
   return (
     <div className={styles.image}>
-      <Image id="typewriter" className={styles.typewriter} src={typewriter} alt="" />
+      <img id="typewriter" className={styles.typewriter} src={`${process.env.NEXT_PUBLIC_API_URL}${image}`} alt="" />
       <img id="triangles" className={styles.triangles} src="/images/triangulos-banner-blog.png" alt="Typewriter" />
     </div>
   )

@@ -3,7 +3,7 @@ import React from "react";
 import PostBody from "src/components/blog/PostBody";
 import PostHero from "src/components/blog/PostHero";
 import RelatedPosts from "src/components/blog/RelatedPosts";
-import { getExerpt, getRelatedPosts } from "src/utils/modules";
+import { getExerpt, getLayoutContent, getRelatedPosts } from "src/utils/modules";
 
 export default function BlogPost({ thisPost, relatedPosts }) {
 
@@ -43,10 +43,15 @@ export async function getStaticProps({ params }) {
     }
   }
 
+  const contactRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/dados-de-contato`);
+  const contact = await contactRes.json();
+
+  const layout = await getLayoutContent();
+
   const relatedPosts = getRelatedPosts(thisPost[0], allPosts);
 
   return {
-    props: { thisPost, relatedPosts },
+    props: { thisPost, relatedPosts, contact, layout },
     revalidate: 5
   }
 }

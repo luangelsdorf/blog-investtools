@@ -1,54 +1,8 @@
 import React, { useEffect } from 'react';
 import styles from './Header.module.scss';
 import Link from 'next/link';
-import Image from 'next/image';
-import logo from 'public/images/new/logo-investtools.svg';
 
-export default function Header() {
-
-  /*const links = [
-    {
-      name: 'A Investtools',
-      slug: 'a-investtools',
-      class: ''
-    },
-    {
-      name: 'Perform It',
-      slug: 'perform-it',
-      class: ''
-    },
-    {
-      name: 'Diligence It',
-      slug: 'diligence-it',
-      class: ''
-    },
-    {
-      name: 'Pré-Trade (Arco It)',
-      slug: 'arco-it',
-      class: ''
-    },
-    {
-      name: 'Novos Negócios',
-      slug: '#',
-      class: 'dropdown'
-    },
-    {
-      name: 'Blog',
-      slug: 'blog',
-      class: ''
-    },
-    {
-      name: 'Contato',
-      slug: 'contato',
-      class: ''
-    },
-    {
-      name: 'Carreiras',
-      slug: 'carreiras',
-      class: ''
-    },
-  ]*/
-
+export default function Header({ content }) {
   useEffect(() => {
     // tornar a navbar menor a partir de 100px "scrollados"
     const navbar = document.querySelector('.navbar');
@@ -76,18 +30,15 @@ export default function Header() {
   function DropDown() {
     return (
       <ul>
-        <li>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.blockchainstudio.com.br">Blockchain Studio</a>
-        </li>
-        <li>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.grana.capital">Grana Capital</a>
-        </li>
-        <li>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.plific.com">Plific</a>
-        </li>
-        <li>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.trampol.in">Trampolin</a>
-        </li>
+        {
+          content.novosNegociosLinks.map((item, index) => {
+            return (
+              <li key={`linkHeader-${index}`}>
+                <a target="_blank" rel="noopener noreferrer" href={item.link}>{item.text}</a>
+              </li>
+            )
+          })
+        }
       </ul>
     )
   }
@@ -98,7 +49,7 @@ export default function Header() {
         <div className="container">
           <Link href="/">
             <a className="navbar-brand">
-              <Image layout="intrinsic" src={logo} quality="1" alt="Investtools" />
+              <img src={`${process.env.NEXT_PUBLIC_API_URL}${content.logo.url}`} alt="Investtools" />
             </a>
           </Link>
           <button className={`navbar-toggler collapsed border-0 ${styles.toggler}`} data-bs-toggle="collapse" data-bs-target="#navigation">
@@ -108,31 +59,37 @@ export default function Header() {
           </button>
           <div className={`${styles.navCollapse} navbar-collapse collapse`} id="navigation">
             <ul className={`${styles.mainNav} navbar-nav ms-auto`}>
+              <li className="nav-item">
+                <a href={`https://investtools.com.br${content.aInvesttools.link}`} className="nav-link">{content.aInvesttools.text}</a>
+              </li>
 
               <li className="nav-item">
-                <a href="https://investtools.com.br/a-investtools" className="nav-link">A Investtools</a>
+                <a href={`https://investtools.com.br${content.performIt.link}`} className="nav-link">{content.performIt.text}</a>
               </li>
+
               <li className="nav-item">
-                <a href="https://investtools.com.br/perform-it" className="nav-link">Perform It</a>
+                <a href={`https://investtools.com.br${content.diligenceIt.link}`} className="nav-link">{content.diligenceIt.text}</a>
               </li>
+
               <li className="nav-item">
-                <a href="https://investtools.com.br/diligence-it" className="nav-link">Diligence It</a>
+                <a href={`https://investtools.com.br${content.arconIt.link}`} className="nav-link">{content.arconIt.text}</a>
               </li>
-              <li className="nav-item">
-                <a href="https://investtools.com.br/arcon-it" className="nav-link">Arcon It</a>
-              </li>
+
               <li className="nav-item dropdown">
-                <a href="https://investtools.com.br/novos-negocios" className="nav-link">Novos Negócios</a>
+                <a href={`https://investtools.com.br${content.novosNegocios.link}`} className="nav-link">{content.novosNegocios.text}</a>
                 <DropDown />
               </li>
+
               <li className="nav-item">
-                <a href="https://blog.investtools.com.br" className="nav-link">Blog</a>
+                <a href={content.blog.link} className="nav-link">{content.blog.text}</a>
               </li>
+
               <li className="nav-item">
-                <a href="https://investtools.com.br/contato" className="nav-link">Contato</a>
+                <a href={`https://investtools.com.br${content.contact.link}`} className="nav-link">{content.contact.text}</a>
               </li>
+
               <li className="nav-item">
-                <a className="nav-link" target="_blank" href="https://investtools.gupy.io/" rel="noopener noreferrer">Carreiras</a>
+                <a className="nav-link" target="_blank" href={content.careers.link} rel="noopener noreferrer">{content.careers.text}</a>
               </li>
             </ul>
           </div>

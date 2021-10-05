@@ -13,8 +13,8 @@ export default function Custom404() {
       
       <div className={styles.notfound}>
         <div>
-          <h1>404</h1>
-          <h2>Esta página não foi encontrada.</h2>
+          <h1>500</h1>
+          <h2>Erro no servidor.</h2>
         </div>
         <div>
           <Link href="/">
