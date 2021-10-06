@@ -85,6 +85,10 @@ export default function Header({ content }) {
               </li>
 
               <li className="nav-item">
+                <a href={`https://investtools.com.br${content.press.link}`} className="nav-link">{content.press.text}</a>
+              </li>
+
+              <li className="nav-item">
                 <a href={`https://investtools.com.br${content.contact.link}`} className="nav-link">{content.contact.text}</a>
               </li>
 
