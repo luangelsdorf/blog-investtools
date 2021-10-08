@@ -44,3 +44,5 @@ export async function getLayoutContent() {
 
   return { header, footer }
 }
+
+export const env = process.env.NEXT_PUBLIC_ENV;

@@ -1,5 +1,6 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
-import PageScripts from 'src/components/common/PageScripts'
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import PageScripts from 'src/components/common/PageScripts';
+import { env } from 'src/utils/modules';
 
 class MyDocument extends Document {
   ogTags = {
@@ -22,12 +23,12 @@ class MyDocument extends Document {
           <meta name="apple-mobile-web-app-status-bar-style" content="black" />
           <meta name="HandHeldFriendly" content="True" />
           {/*OG Tags*/}
-          <meta property="og:title"       content={this.ogTags.title} />
-          <meta property="og:site_name"   content={this.ogTags.site_name} />
-          <meta property="og:url"         content={this.ogTags.url} />
+          <meta property="og:title" content={this.ogTags.title} />
+          <meta property="og:site_name" content={this.ogTags.site_name} />
+          <meta property="og:url" content={this.ogTags.url} />
           <meta property="og:description" content={this.ogTags.description} />
-          <meta property="og:type"        content={this.ogTags.type} />
-          <meta property="og:image"       content={this.ogTags.image} />
+          <meta property="og:type" content={this.ogTags.type} />
+          <meta property="og:image" content={this.ogTags.image} />
           {/*Favicon*/}
           <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" sizes="180x180" />
           <link rel="icon" href="/favicon/favicon-32x32.png" sizes="32x32" type="image/png" />
@@ -43,7 +44,12 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script src="/js/bootstrap.bundle.min.js"/>
+          <script src="/js/bootstrap.bundle.min.js" />
+          {
+            env === 'dev' ? null : (
+              <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/b2a333e2-7df2-44e5-9a57-75cd3a3325dc-loader.js" />
+            )
+          }
         </body>
       </Html>
     )
