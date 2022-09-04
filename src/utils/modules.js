@@ -33,7 +33,19 @@ export function getRelatedPosts(thisPost, allPosts) {
   }
 }
 
-export const getExerpt = (string) => string.split(' ').slice(0, 20).join(' ').replace(/(<([^>]+)>)/gi, "");
+export function getExcerpt(string) {
+  let cleanText = string.replace(/(<([^>]+)>)/gi, "").split(' ').slice(0, 24).join(' ');
+  const lastChar = cleanText.at(-1);
+  switch (lastChar) {
+    case '.':
+    case ',':
+    case '!':
+    case '?':
+      cleanText = cleanText.slice(0, -1);
+  }
+  cleanText += '…';
+  return cleanText;
+}
 
 export async function getLayoutContent() {
   const resHeader = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/cabecalho`);

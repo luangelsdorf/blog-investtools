@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from './PostCard.module.scss';
 import Link from 'next/link';
-import { getExerpt } from 'src/utils/modules';
+import { getExcerpt } from 'src/utils/modules';
 
 export default function PostCard(props) {
 
@@ -36,7 +36,7 @@ export default function PostCard(props) {
           </a>
         </Link>
         <div className="body-small">
-          {props.body ? getExerpt(props.body) : null}
+          {props.body ? getExcerpt(props.body) : null}
         </div>
         <Link href={props.href}>
           <a className="body-small">Ler Mais</a>
