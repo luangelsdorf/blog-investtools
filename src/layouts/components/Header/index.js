@@ -75,6 +75,10 @@ export default function Header({ content }) {
                 <a href={`https://investtools.com.br${content.arconIt.link}`} className="nav-link">{content.arconIt.text}</a>
               </li>
 
+              <li className="nav-item">
+                <a href={'https://investtools.com.br/consultoria'} className="nav-link">{'Consultoria'}</a>
+              </li>
+
               <li className="nav-item dropdown">
                 <a href={`https://investtools.com.br${content.novosNegocios.link}`} className="nav-link">{content.novosNegocios.text}</a>
                 <DropDown />
