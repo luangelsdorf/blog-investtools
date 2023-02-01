@@ -3,6 +3,7 @@ import Head from "next/head";
 import BlogHero from "src/components/blog/BlogHero";
 import PostList from 'src/components/blog/PostList';
 import { getLayoutContent } from 'src/utils/modules';
+import getLocaleParam from 'src/utils/getLocaleParam';
 
 export default function Blog({ postList, pageContent }) {
 
@@ -19,17 +20,19 @@ export default function Blog({ postList, pageContent }) {
   )
 }
 
-export async function getStaticProps() {
-  const posts = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/`);
+export async function getStaticProps({ locale }) {
+  let localeParameter = getLocaleParam(locale);
+
+  const posts = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/${localeParameter}`);
   const postList = await posts.json();
 
-  const contactRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/dados-de-contato`);
+  const contactRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/dados-de-contato${localeParameter}`);
   const contact = await contactRes.json();
 
-  const content = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/home-blog`);
+  const content = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/home-blog${localeParameter}`);
   const pageContent = await content.json();
 
-  const layout = await getLayoutContent();
+  const layout = await getLayoutContent(localeParameter);
 
   return {
     props: { postList, pageContent, contact, layout },
