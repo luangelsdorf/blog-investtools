@@ -104,7 +104,7 @@ export default function Header({ content }) {
               <li className="nav-item">
                 <Link href={route} locale={flag}>
                   <a className="nav-link">
-                    <img width="16" height="16" src={`/images/flags/${flag}.png`} />
+                    <img width="16" height="16" src={`https://investtools.com.br/images/flags/${flag}.png`} />
                   </a>
                 </Link>
               </li>
