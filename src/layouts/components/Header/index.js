@@ -43,6 +43,10 @@ export default function Header({ content }) {
     )
   }
 
+  let { locale, route } = useRouter();
+  let prefix = locale === 'pt' ? '' : locale;
+  let flag = locale === 'pt' ? 'en' : 'pt';
+
   return (
     <header className={styles.header}>
       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
@@ -85,7 +89,7 @@ export default function Header({ content }) {
               </li>
 
               <li className="nav-item">
-                <a href={content.blog.link} className="nav-link">{content.blog.text}</a>
+              <a href={`${content.blog.link}${prefix}`} className="nav-link">{content.blog.text}</a>
               </li>
 
               <li className="nav-item">
@@ -94,6 +98,14 @@ export default function Header({ content }) {
 
               <li className="nav-item">
                 <a className="nav-link" target="_blank" href={content.careers.link} rel="noopener noreferrer">{content.careers.text}</a>
+              </li>
+
+              <li className="nav-item">
+                <Link href={route} locale={flag}>
+                  <a className="nav-link">
+                    <img width="16" height="16" src={`/images/flags/${flag}.png`} />
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>
