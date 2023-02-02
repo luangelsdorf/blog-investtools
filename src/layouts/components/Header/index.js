@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from './Header.module.scss';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Header({ content }) {
   useEffect(() => {
