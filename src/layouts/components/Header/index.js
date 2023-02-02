@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 export default function Header({ content }) {
+
   useEffect(() => {
     // tornar a navbar menor a partir de 100px "scrollados"
     const navbar = document.querySelector('.navbar');
@@ -45,7 +46,7 @@ export default function Header({ content }) {
   }
 
   let { locale, route } = useRouter();
-  let prefix = locale === 'pt' ? '' : locale;
+  let prefix = locale === 'pt' ? '' : `/${locale}`;
   let flag = locale === 'pt' ? 'en' : 'pt';
 
   return (
@@ -65,27 +66,27 @@ export default function Header({ content }) {
           <div className={`${styles.navCollapse} navbar-collapse collapse`} id="navigation">
             <ul className={`${styles.mainNav} navbar-nav ms-auto`}>
               <li className="nav-item">
-                <a href={`https://investtools.com.br${content.aInvesttools.link}`} className="nav-link">{content.aInvesttools.text}</a>
+                <a href={`https://investtools.com.br${prefix}${content.aInvesttools.link}`} className="nav-link">{content.aInvesttools.text}</a>
               </li>
 
               <li className="nav-item">
-                <a href={`https://investtools.com.br${content.performIt.link}`} className="nav-link">{content.performIt.text}</a>
+                <a href={`https://investtools.com.br${prefix}${content.performIt.link}`} className="nav-link">{content.performIt.text}</a>
               </li>
 
               <li className="nav-item">
-                <a href={`https://investtools.com.br${content.diligenceIt.link}`} className="nav-link">{content.diligenceIt.text}</a>
+                <a href={`https://investtools.com.br${prefix}${content.diligenceIt.link}`} className="nav-link">{content.diligenceIt.text}</a>
               </li>
 
               <li className="nav-item">
-                <a href={`https://investtools.com.br${content.arconIt.link}`} className="nav-link">{content.arconIt.text}</a>
+                <a href={`https://investtools.com.br${prefix}${content.arconIt.link}`} className="nav-link">{content.arconIt.text}</a>
               </li>
 
               <li className="nav-item">
-                <a href={`https://investtools.com.br${content.consultancy.link}`} className="nav-link">{content.consultancy.text}</a>
+                <a href={`https://investtools.com.br${prefix}${content.consultancy.link}`} className="nav-link">{content.consultancy.text}</a>
               </li>
 
               <li className="nav-item dropdown">
-                <a href={`https://investtools.com.br${content.novosNegocios.link}`} className="nav-link">{content.novosNegocios.text}</a>
+                <a href={`https://investtools.com.br${prefix}${content.novosNegocios.link}`} className="nav-link">{content.novosNegocios.text}</a>
                 <DropDown />
               </li>
 
@@ -94,7 +95,7 @@ export default function Header({ content }) {
               </li>
 
               <li className="nav-item">
-                <a href={`https://investtools.com.br${content.contact.link}`} className="nav-link">{content.contact.text}</a>
+                <a href={`https://investtools.com.br${prefix}${content.contact.link}`} className="nav-link">{content.contact.text}</a>
               </li>
 
               <li className="nav-item">
