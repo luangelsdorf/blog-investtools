@@ -81,7 +81,7 @@ export default function Header({ content }) {
               </li>
 
               <li className="nav-item">
-                <a href={'https://investtools.com.br/consultoria'} className="nav-link">{'Consultoria'}</a>
+                <a href={`https://investtools.com.br${content.consultancy.link}`} className="nav-link">{content.consultancy.text}</a>
               </li>
 
               <li className="nav-item dropdown">
