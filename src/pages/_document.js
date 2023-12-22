@@ -47,7 +47,10 @@ class MyDocument extends Document {
           <script src="/js/bootstrap.bundle.min.js" />
           {
             env === 'dev' ? null : (
-              <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/b2a333e2-7df2-44e5-9a57-75cd3a3325dc-loader.js" />
+              <>
+                <meta name="adopt-website-id" content="1d12a76e-f881-429d-8c86-0c2a876746b7" />
+                <script src="//tag.goadopt.io/injector.js?website_code=1d12a76e-f881-429d-8c86-0c2a876746b7" className="adopt-injector" />
+              </>
             )
           }
         </body>
