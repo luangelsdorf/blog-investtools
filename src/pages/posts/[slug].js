@@ -3,7 +3,6 @@ import React from "react";
 import PostBody from "src/components/blog/PostBody";
 import PostHero from "src/components/blog/PostHero";
 import RelatedPosts from "src/components/blog/RelatedPosts";
-import getLocaleParam from "src/utils/getLocaleParam";
 import { getExcerpt, getLayoutContent, getRelatedPosts } from "src/utils/modules";
 
 export default function BlogPost({ thisPost, relatedPosts }) {
@@ -25,7 +24,7 @@ export default function BlogPost({ thisPost, relatedPosts }) {
 }
 
 export async function getStaticPaths({ locale }) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/${getLocaleParam(locale)}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/`);
   const allPosts = await res.json();
   const paths = allPosts.map((post) => ({
     params: { slug: post.slug },
@@ -34,9 +33,8 @@ export async function getStaticPaths({ locale }) {
 }
 
 export async function getStaticProps({ params, locale }) {
-  let localeParameter = getLocaleParam(locale);
-
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/${localeParameter}`);
+  
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts`);
   const allPosts = await res.json();
   const thisPost = allPosts.filter(post => post.slug === params.slug);
 
@@ -46,10 +44,10 @@ export async function getStaticProps({ params, locale }) {
     }
   }
 
-  const contactRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/dados-de-contato${localeParameter}`);
+  const contactRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/dados-de-contato`);
   const contact = await contactRes.json();
 
-  const layout = await getLayoutContent(localeParameter);
+  const layout = await getLayoutContent();
 
   const relatedPosts = getRelatedPosts(thisPost[0], allPosts);
 
